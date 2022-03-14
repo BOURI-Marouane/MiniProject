@@ -1,0 +1,39 @@
+{
+	"editors": [
+		{
+			"type": "method",
+			"id": 2147483639,
+			"codeDescriptor": {
+				"type": 2,
+				"table": 3,
+				"formName": "Input",
+				"objectName": "at_formation",
+				"methodPath": "/SOURCES/TableForms/3/Input/ObjectMethods/at_formation.4dm"
+			}
+		},
+		{
+			"type": "form",
+			"id": 225,
+			"table": 3,
+			"formName": "Input"
+		},
+		{
+			"type": "explorer"
+		},
+		{
+			"type": "form",
+			"id": 223,
+			"table": 2,
+			"formName": "Input"
+		},
+		{
+			"type": "form",
+			"id": 226,
+			"table": 3,
+			"formName": "Output"
+		},
+		{
+			"type": "structure"
+		}
+	]
+}

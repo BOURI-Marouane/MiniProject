@@ -1,0 +1,62 @@
+{
+	"Sources/TableForms/3/Input/ObjectMethods/Button.4dm": {
+		"left": 315,
+		"top": 110,
+		"width": 965,
+		"height": 708
+	},
+	"Sources/Methods/Navigation.4dm": {
+		"left": 347,
+		"top": 109,
+		"width": 965,
+		"height": 708
+	},
+	"Sources/TableForms/2/Input/method.4dm": {
+		"left": 315,
+		"top": 110,
+		"width": 965,
+		"height": 708
+	},
+	"Sources/TableForms/3/Input/ObjectMethods/PopupDate.4dm": {
+		"left": 315,
+		"top": 110,
+		"width": 965,
+		"height": 708
+	},
+	"Sources/TableForms/3/Input/ObjectMethods/PopupDate1.4dm": {
+		"left": 315,
+		"top": 110,
+		"width": 965,
+		"height": 708
+	},
+	"Sources/TableForms/3/Input/ObjectMethods/field_staringDate.4dm": {
+		"left": 315,
+		"top": 110,
+		"width": 965,
+		"height": 708
+	},
+	"Sources/TableForms/3/Input/ObjectMethods/field_endingDate.4dm": {
+		"left": 315,
+		"top": 110,
+		"width": 965,
+		"height": 708
+	},
+	"Sources/TableForms/3/Input/method.4dm": {
+		"left": 315,
+		"top": 110,
+		"width": 965,
+		"height": 708
+	},
+	"Sources/TableForms/3/Input/ObjectMethods/list_formation.4dm": {
+		"left": 0,
+		"top": 109,
+		"width": 1366,
+		"height": 627
+	},
+	"Sources/TableForms/3/Input/ObjectMethods/at_formation.4dm": {
+		"left": 0,
+		"top": 109,
+		"width": 1366,
+		"height": 627
+	}
+}

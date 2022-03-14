@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="Project" uuid="DF359460DBD44844AD882148B221A4B0" collation_locale="fr">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="User" uuid="78588B37DEBF214F86014D91EF3A34E1" id="1">
+		<field name="ID" uuid="80BD4C6268805546A025844D45283184" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="lastName" uuid="F28CE30EC409BD4C9426649187D428E8" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="firstName" uuid="FE5D5B4F643D6F4FA6E3E08BFC2658F9" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="ID_task" uuid="AF9B596220E1FB4AA7E53661E1DB2092" type="4" never_null="true" id="4"/>
+		<primary_key field_name="ID" field_uuid="80BD4C6268805546A025844D45283184"/>
+		<table_extra output_form="Outpput" input_form="Input">
+			<editor_table_info displayable_fields_count="6">
+				<color red="226" green="158" blue="214" alpha="255"/>
+				<coordinates left="912" top="31" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Formation" uuid="7E14B188C82B7845ADCC4EA907540DBE" id="2">
+		<field name="ID" uuid="3E970B90A5554143B39F9BE5BD550EBA" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="nameFormation" uuid="97F3D056BD893D43B69E5BFB5F616F00" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="startingDate" uuid="D8AB67B75C2A464FA960833BF1660F27" type="8" never_null="true" id="3"/>
+		<field name="endingDate" uuid="62965D4E68429040A1E93E1D6884AD43" type="8" never_null="true" id="4"/>
+		<primary_key field_name="ID" field_uuid="3E970B90A5554143B39F9BE5BD550EBA"/>
+		<table_extra input_form="Input" output_form="Output">
+			<editor_table_info displayable_fields_count="6">
+				<color red="168" green="206" blue="226" alpha="255"/>
+				<coordinates left="284" top="16" width="152" height="173.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Task" uuid="257822D79CE57449A2562A9F66D10A6E" id="3">
+		<field name="ID" uuid="0AC86CD00148304F976C7D52B0A1760C" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="task" uuid="B941A48AE1F2D740AC15599CAA2FB6E4" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="staringDate" uuid="98C056B069924F46881F15C4B3D6024C" type="8" never_null="true" id="3"/>
+		<field name="endingDate" uuid="5F2D389CF5C1824CABF1E0F7242C7CFE" type="8" never_null="true" id="4"/>
+		<field name="done" uuid="9D0020772A911E49A239F64E941D6286" type="1" never_null="true" id="5"/>
+		<field name="starting" uuid="32F0F676FC814E40B3A44BA9EC04654B" type="1" never_null="true" id="6"/>
+		<field name="ID_User" uuid="778ED69612993043BBB15BE1B64D5B7B" type="4" never_null="true" id="7"/>
+		<field name="ID_formation" uuid="26C521F96D2A9C4B9C41853FAA9AD37F" type="4" never_null="true" id="8"/>
+		<field name="nostarting" uuid="25D0686FB462A3448EA1544FBC4F5026" type="1" never_null="true" id="9"/>
+		<primary_key field_name="ID" field_uuid="0AC86CD00148304F976C7D52B0A1760C"/>
+		<table_extra input_form="Input" output_form="Output">
+			<editor_table_info displayable_fields_count="9">
+				<color red="255" green="153" blue="63" alpha="255"/>
+				<coordinates left="545" top="44" width="182" height="233.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<relation uuid="E45BE53A71C48846AE85EF8DCF93E75E" name_Nto1="Link_1" name_1toN="Link_1_return" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="AF9B596220E1FB4AA7E53661E1DB2092" name="ID_task">
+				<table_ref uuid="78588B37DEBF214F86014D91EF3A34E1" name="User"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="0AC86CD00148304F976C7D52B0A1760C" name="ID">
+				<table_ref uuid="257822D79CE57449A2562A9F66D10A6E" name="Task"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="0" via_point_y="0" prefers_left="true" smartlink="true">
+				<color red="240" green="240" blue="240" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<relation uuid="16858E29A2F64C4CBA4687497FFB6245" name_Nto1="Link_2" name_1toN="Link_2_return" auto_load_Nto1="false" auto_load_1toN="false" foreign_key="false" state="1">
+		<related_field kind="source">
+			<field_ref uuid="26C521F96D2A9C4B9C41853FAA9AD37F" name="ID_formation">
+				<table_ref uuid="257822D79CE57449A2562A9F66D10A6E" name="Task"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="3E970B90A5554143B39F9BE5BD550EBA" name="ID">
+				<table_ref uuid="7E14B188C82B7845ADCC4EA907540DBE" name="Formation"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="0" via_point_y="0" prefers_left="true" smartlink="true">
+				<color red="240" green="240" blue="240" alpha="0"/>
+			</editor_relation_info>
+		</relation_extra>
+	</relation>
+	<index kind="regular" unique_keys="true" uuid="CF2BCC33EFD9C946824115497A0AA84A" type="1">
+		<field_ref uuid="80BD4C6268805546A025844D45283184" name="ID">
+			<table_ref uuid="78588B37DEBF214F86014D91EF3A34E1" name="User"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="EDA745581F0AF741B567A7FB0A521E92" type="7">
+		<field_ref uuid="0AC86CD00148304F976C7D52B0A1760C" name="ID">
+			<table_ref uuid="257822D79CE57449A2562A9F66D10A6E" name="Task"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="FF3C5B7CE9082E4ABDAA595AE382E7AF" type="7">
+		<field_ref uuid="3E970B90A5554143B39F9BE5BD550EBA" name="ID">
+			<table_ref uuid="7E14B188C82B7845ADCC4EA907540DBE" name="Formation"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:68.1.0" __keywordBuildingHash="icu:68.1.0">
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>

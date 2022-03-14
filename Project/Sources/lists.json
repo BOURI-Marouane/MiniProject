@@ -1,0 +1,12 @@
+{
+	"listFormation": {
+		"editable": true,
+		"items": [
+			{
+				"text": "NameFormation",
+				"ref": 1,
+				"editable": true
+			}
+		]
+	}
+}
