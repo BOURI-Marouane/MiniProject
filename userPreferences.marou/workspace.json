@@ -1,9 +1,24 @@
 {
 	"editors": [
 		{
+			"type": "method",
+			"id": 2147483646,
+			"codeDescriptor": {
+				"type": 11,
+				"className": "Task",
+				"methodPath": "/SOURCES/Classes/Task.4dm"
+			}
+		},
+		{
+			"type": "explorer"
+		},
+		{
 			"type": "form",
 			"id": 219,
 			"formName": "Welcome "
+		},
+		{
+			"type": "structure"
 		}
 	]
 }
