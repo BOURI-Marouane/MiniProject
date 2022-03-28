@@ -14,7 +14,7 @@ exposed Function create
 	
 	//$task:=$input
 	$task.task:=$1.task
-	$task.staringDate:=Date:C102($1.startingDate)
+	$task.staringDate:=Date:C102($1.staringDate)
 	$task.endingDate:=Date:C102($1.endingDate)
 	$task.done:=$1.done
 	$task.starting:=$1.starting
@@ -40,16 +40,17 @@ exposed Function update
 	
 	//delete
 exposed Function delete
-	//C_OBJECT($1; $input)
+	//C_OBJECT($1)
 	//$input:=$1
-	$task:=ds:C1482.Task.get($1.ID)
+	$task:=ds:C1482.Task.get($1)
 	$task.drop()
 	$0:=$task
 	
 	
 	//all
 exposed Function ALL
-	var $allTask : cs:C1710.Task
+	$allTask:=New collection:C1472()
+	
 	//C_OBJECT($allTask)
 	$allTask:=ds:C1482.Task.all()
 	$0:=$allTask

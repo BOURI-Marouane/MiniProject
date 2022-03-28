@@ -13,7 +13,7 @@
 		<table_extra input_form="Input" output_form="Output">
 			<editor_table_info displayable_fields_count="6">
 				<color red="255" green="153" blue="63" alpha="255"/>
-				<coordinates left="545" top="49" width="181" height="171.33203125"/>
+				<coordinates left="510" top="92" width="181" height="171.33203125"/>
 			</editor_table_info>
 		</table_extra>
 	</table>

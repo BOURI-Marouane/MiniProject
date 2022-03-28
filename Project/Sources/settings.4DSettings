@@ -1,10 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><preferences stamp="2">
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="8">
 	<com.4d>
 		<web>
 			<standalone_server>
 				<configuration port_number="80"/>
 				<rest launch_at_startup="true"/>
+				<options>
+					<cors enabled="true">
+						<domain methods="GET;HEAD;POST;PUT" name="*"/>
+					</cors>
+				</options>
 			</standalone_server>
 		</web>
+		<server>
+			<network>
+				<options publication_name="Server4D"/>
+			</network>
+		</server>
 	</com.4d>
 </preferences>
